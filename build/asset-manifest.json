@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df5ecaf1.css",
+    "main.js": "/static/js/main.dada4779.js",
+    "index.html": "/index.html",
+    "main.df5ecaf1.css.map": "/static/css/main.df5ecaf1.css.map",
+    "main.dada4779.js.map": "/static/js/main.dada4779.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df5ecaf1.css",
+    "static/js/main.dada4779.js"
+  ]
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { useToast } from '../context/ToastContext';
-import { useAuth } from '../context/AuthContext';
 import { GROWTH_FEATURES, PRIME_FEATURES } from '../data/mockData';
 
 /* ══ UPGRADE MODAL — now navigates to membership page ══ */

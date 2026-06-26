@@ -115,14 +115,13 @@ export function Topbar({ currentView, onNav }) {
             placeholder="Search customers, reviews, pages…"
             value={searchQuery}
             onChange={e => { setSearchQuery(e.target.value); setSearchOpen(true); }}
-            onFocus={() => setSearchOpen(true)}
+            onFocus={e  => { setSearchOpen(true); e.target.style.borderColor = 'var(--in)'; }}
+            onBlur={e   => e.target.style.borderColor = 'var(--b1)'}
             onKeyDown={e => {
               if (e.key === 'Escape') { setSearchQuery(''); setSearchOpen(false); }
               if (e.key === 'Enter' && searchResults.length > 0) { onNav(searchResults[0].page); setSearchQuery(''); setSearchOpen(false); }
             }}
             style={{ width: '100%', background: 'var(--bg)', border: '1px solid var(--b1)', borderRadius: 8, padding: '7px 10px 7px 30px', color: 'var(--tx)', fontSize: 12, outline: 'none', fontFamily: 'inherit', boxSizing: 'border-box' }}
-            onFocus={e  => e.target.style.borderColor = 'var(--in)'}
-            onBlur={e   => e.target.style.borderColor = 'var(--b1)'}
           />
           {searchQuery && (
             <button onClick={() => { setSearchQuery(''); setSearchOpen(false); }}

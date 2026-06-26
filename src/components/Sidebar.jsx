@@ -287,19 +287,3 @@ function NavItem({ item, active, onNav, onOpenModal }) {
     </div>
   );
 }
-
-function TierBadge({ style, label, onClick }) {
-  const styles = {
-    free:   { background: 'rgba(148,163,184,.12)', border: '1px solid rgba(148,163,184,.2)', color: 'var(--mu)' },
-    growth: { background: 'rgba(99,102,241,.15)',  border: '1px solid rgba(99,102,241,.3)',  color: 'var(--in2)' },
-    prime:  { background: 'linear-gradient(90deg,rgba(245,158,11,.2),rgba(251,191,36,.12))', border: '1px solid rgba(245,158,11,.3)', color: 'var(--go2)' },
-  };
-  return (
-    <div
-      onClick={onClick}
-      style={{ display: 'inline-flex', alignItems: 'center', marginTop: 7, padding: '3px 10px', borderRadius: 20, fontSize: 11, fontWeight: 600, cursor: 'pointer', transition: 'opacity .15s', ...styles[style] }}
-    >
-      {label}
-    </div>
-  );
-}
